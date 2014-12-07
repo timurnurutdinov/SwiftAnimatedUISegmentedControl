@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zHo-bF-4bJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Entry point-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="Entry point" id="vXZ-lx-hvc" customClass="ViewController" customModule="variousUISegmentedControls" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytc-Pk-bTi">
+                                <rect key="frame" x="76" y="129" width="157" height="30"/>
+                                <state key="normal" title="Animated by CALayers">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UV7-fP-2sn" kind="modal" id="2QB-Tn-u6W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0y-1J-faB">
+                                <rect key="frame" x="97" y="91" width="115" height="30"/>
+                                <state key="normal" title="Static by Images">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xiV-pw-5MP" kind="modal" id="4HM-Ml-PhR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="r0y-1J-faB" secondAttribute="centerX" id="6ik-r7-AgN"/>
+                            <constraint firstAttribute="centerX" secondItem="ytc-Pk-bTi" secondAttribute="centerX" id="M6k-ZD-63H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pFW-gA-3hr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="398"/>
+        </scene>
+        <!--Static-->
+        <scene sceneID="3NR-fB-HxZ">
+            <objects>
+                <viewController title="Static" id="xiV-pw-5MP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GOH-2B-aeh"/>
+                        <viewControllerLayoutGuide type="bottom" id="VF1-rw-moO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ks6-hD-uv4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="deG-mg-RpK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Uka-YC-dI1">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="R3l-G2-lND">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="Cz5-St-aLm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dT7-bc-575" customClass="ImagedSegmentedControl" customModule="variousUISegmentedControls" customModuleProvider="target">
+                                <rect key="frame" x="7" y="64" width="306" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="P0c-Mv-7tf"/>
+                                    <constraint firstAttribute="width" constant="306" id="kFg-H4-kFa"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Top Rated"/>
+                                    <segment title="Popular"/>
+                                    <segment title="Country"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="dT7-bc-575" secondAttribute="centerX" id="5Rz-ad-Y4e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="deG-mg-RpK" secondAttribute="trailing" constant="-71" id="BZ7-oh-bmL"/>
+                            <constraint firstItem="deG-mg-RpK" firstAttribute="leading" secondItem="ks6-hD-uv4" secondAttribute="leading" id="OE9-Ja-sZZ"/>
+                            <constraint firstItem="dT7-bc-575" firstAttribute="top" secondItem="deG-mg-RpK" secondAttribute="bottom" constant="20" id="opX-TM-4fM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xne-VH-1KF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jF1-6o-hhj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zHo-bF-4bJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hgn-8T-wxK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ihj-99-IfN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLg-w3-VPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="404"/>
+        </scene>
+        <!--Animated View Controller-->
+        <scene sceneID="EjC-QT-zpV">
+            <objects>
+                <viewController id="UV7-fP-2sn" customClass="AnimatedViewController" customModule="variousUISegmentedControls" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jVD-Xx-q3a"/>
+                        <viewControllerLayoutGuide type="bottom" id="OQn-65-5OV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DdP-Al-UYA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpj-FN-IDh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="SOn-Vc-aVN">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="1bT-wg-Cyl">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="modal" id="xAu-5V-R8n"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tsb-mR-LSi" customClass="mySegmentedControl" customModule="variousUISegmentedControls" customModuleProvider="target">
+                                <rect key="frame" x="7" y="100" width="306" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="G6A-oe-T4X"/>
+                                    <constraint firstAttribute="width" constant="306" id="JJx-Xr-tCb"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="myAction:" destination="UV7-fP-2sn" eventType="valueChanged" id="rMi-fb-vSd"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="tsb-mR-LSi" secondAttribute="centerX" id="UFQ-42-oZI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="control" destination="tsb-mR-LSi" id="C6F-oL-QEw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9h-7L-YdU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="718"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="xAu-5V-R8n"/>
+    </inferredMetricsTieBreakers>
+</document>
