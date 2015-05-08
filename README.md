@@ -1,5 +1,6 @@
-animated-segmented-control-swift
+Animated UI Segmented Controls 
+Swift version
 ================================
 
 
-#### 2 вида контроллов
+#### Feel the difference between two kinds of segmented controls
